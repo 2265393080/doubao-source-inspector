@@ -1,0 +1,130 @@
+.doubao-source-inspector-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  flex: 0 0 auto !important;
+  max-width: 144px !important;
+  min-height: 22px !important;
+  margin-right: 6px !important;
+  padding: 1px 8px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(91, 92, 226, 0.22) !important;
+  border-radius: 6px !important;
+  background: rgba(91, 92, 226, 0.09) !important;
+  color: #5758c9 !important;
+  font-size: 12px !important;
+  font-weight: 650 !important;
+  line-height: 18px !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  vertical-align: middle !important;
+}
+
+.doubao-source-inspector-badge-icon {
+  display: block !important;
+  width: 14px !important;
+  height: 14px !important;
+  flex: 0 0 14px !important;
+  border-radius: 3px !important;
+  object-fit: cover !important;
+  background: rgba(255, 255, 255, 0.72) !important;
+}
+
+.doubao-source-inspector-badge-text {
+  display: block !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.doubao-source-inspector-summary {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 7px !important;
+  max-width: 100% !important;
+  margin: 10px 0 4px !important;
+  padding: 9px 10px !important;
+  border: 1px solid rgba(91, 92, 226, 0.16) !important;
+  border-radius: 10px !important;
+  background: rgba(91, 92, 226, 0.055) !important;
+  color: rgba(24, 25, 39, 0.78) !important;
+  font-family: inherit !important;
+  font-size: 12px !important;
+  line-height: 20px !important;
+}
+
+.doubao-source-inspector-summary-title {
+  margin-right: 1px !important;
+  color: rgba(24, 25, 39, 0.9) !important;
+  font-weight: 700 !important;
+}
+
+.doubao-source-inspector-summary-item {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  padding: 1px 7px !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.76) !important;
+  box-shadow: inset 0 0 0 1px rgba(91, 92, 226, 0.11) !important;
+}
+
+.doubao-source-inspector-summary-icon {
+  display: block !important;
+  width: 14px !important;
+  height: 14px !important;
+  flex: 0 0 14px !important;
+  border-radius: 3px !important;
+  object-fit: cover !important;
+  background: rgba(255, 255, 255, 0.72) !important;
+}
+
+.doubao-source-inspector-summary-item strong {
+  color: #5758c9 !important;
+  font-weight: 650 !important;
+}
+
+.doubao-source-inspector-summary-item > span {
+  color: rgba(24, 25, 39, 0.62) !important;
+}
+
+.doubao-source-inspector-summary-total {
+  margin-left: auto !important;
+  color: rgba(24, 25, 39, 0.52) !important;
+  white-space: nowrap !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .doubao-source-inspector-badge {
+    border-color: rgba(153, 154, 255, 0.28) !important;
+    background: rgba(153, 154, 255, 0.13) !important;
+    color: #b8b9ff !important;
+  }
+
+  .doubao-source-inspector-summary {
+    border-color: rgba(153, 154, 255, 0.18) !important;
+    background: rgba(153, 154, 255, 0.08) !important;
+    color: rgba(245, 246, 252, 0.78) !important;
+  }
+
+  .doubao-source-inspector-summary-title {
+    color: rgba(245, 246, 252, 0.92) !important;
+  }
+
+  .doubao-source-inspector-summary-item {
+    background: rgba(255, 255, 255, 0.065) !important;
+    box-shadow: inset 0 0 0 1px rgba(153, 154, 255, 0.13) !important;
+  }
+
+  .doubao-source-inspector-summary-item strong {
+    color: #b8b9ff !important;
+  }
+
+  .doubao-source-inspector-summary-item > span,
+  .doubao-source-inspector-summary-total {
+    color: rgba(245, 246, 252, 0.56) !important;
+  }
+}

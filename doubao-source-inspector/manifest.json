@@ -1,0 +1,55 @@
+{
+  "manifest_version": 3,
+  "name": "豆包联网来源分析器",
+  "version": "1.4.0",
+  "description": "在豆包联网搜索结果旁直接标注来源网站与图标，并显示每组结果的来源汇总；同时保留弹窗分析与导出。",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "clipboardWrite"
+  ],
+  "action": {
+    "default_title": "分析豆包联网来源",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://doubao.com/*",
+        "https://www.doubao.com/*",
+        "https://*.doubao.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "site-icons/*"
+      ],
+      "matches": [
+        "https://doubao.com/*",
+        "https://www.doubao.com/*",
+        "https://*.doubao.com/*"
+      ]
+    }
+  ]
+}

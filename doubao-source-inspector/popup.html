@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>豆包联网来源分析器</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div class="brand-mark" aria-hidden="true">源</div>
+      <div class="hero-copy">
+        <h1>豆包联网来源分析器</h1>
+        <p id="pageStatus">正在读取当前页面…</p>
+      </div>
+      <button id="refreshBtn" class="icon-button" type="button" title="重新分析" aria-label="重新分析">↻</button>
+    </header>
+
+    <section id="notice" class="notice hidden" role="status"></section>
+
+    <section class="stats" aria-label="分析概览">
+      <article class="stat-card">
+        <strong id="sourceCount">—</strong>
+        <span>搜索结果</span>
+      </article>
+      <article class="stat-card">
+        <strong id="siteCount">—</strong>
+        <span>内容网站</span>
+      </article>
+      <article class="stat-card">
+        <strong id="batchCount">—</strong>
+        <span>搜索批次</span>
+      </article>
+    </section>
+
+    <nav class="tabs" aria-label="结果类型">
+      <button class="tab active" type="button" data-tab="sources">搜索引用</button>
+      <button class="tab" type="button" data-tab="network">页面请求</button>
+    </nav>
+
+    <section class="toolbar">
+      <label class="search-box">
+        <span aria-hidden="true">⌕</span>
+        <input id="filterInput" type="search" placeholder="筛选网站、标题或域名" autocomplete="off" />
+      </label>
+      <button id="copyBtn" class="secondary-button" type="button">复制</button>
+      <button id="csvBtn" class="secondary-button" type="button">CSV</button>
+      <button id="jsonBtn" class="secondary-button" type="button">JSON</button>
+    </section>
+
+    <section id="sourcesPanel" class="panel active">
+      <div class="explain">
+        <strong>搜索引用</strong>
+        <span>来自豆包结果卡片，代表答案引用或检索到的网站，不一定由浏览器直接访问。</span>
+      </div>
+      <div id="domainSummary" class="domain-summary"></div>
+      <div id="sourceList" class="result-list"></div>
+      <div id="emptySources" class="empty hidden">
+        <div class="empty-icon">⌕</div>
+        <strong>没有找到搜索来源</strong>
+        <p>请打开包含“联网搜索”结果的豆包对话，再点击右上角刷新。</p>
+      </div>
+    </section>
+
+    <section id="networkPanel" class="panel">
+      <div class="explain">
+        <strong>页面请求</strong>
+        <span>来自浏览器 Performance 记录，代表当前页面真正加载过的网络域名。</span>
+      </div>
+      <div id="networkList" class="network-list"></div>
+      <div id="emptyNetwork" class="empty hidden">
+        <div class="empty-icon">⇄</div>
+        <strong>没有可用的请求记录</strong>
+        <p>刷新豆包页面后立即打开插件，可获得更完整的资源请求记录。</p>
+      </div>
+    </section>
+
+    <footer>
+      <span>本地分析，不上传页面内容</span>
+      <span id="scanTime"></span>
+    </footer>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>
