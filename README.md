@@ -1,6 +1,6 @@
 <img width="2235" height="2127" alt="image" src="https://github.com/user-attachments/assets/cd9086c2-da3d-415f-82da-4c709d67bb5e" />
-# 豆包联网来源分析器
 
+# 豆包联网来源分析器
 Chrome Manifest V3 扩展，用于直接标注豆包网页对话中的联网搜索来源。
 
 ## 页面内显示
